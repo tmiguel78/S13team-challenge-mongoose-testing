@@ -1,0 +1,26 @@
+{
+  "name": "s13team-challenge-mongoose-testing",
+  "version": "1.0.0",
+  "description": "Téneis que crear una API en Node.js utilizando Express con mongoose que consistirá en una red social, donde podras crear, ver publicaciones, actulizar y borrarlas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmiguel78/S13team-challenge-mongoose-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmiguel78/S13team-challenge-mongoose-testing/issues"
+  },
+  "homepage": "https://github.com/tmiguel78/S13team-challenge-mongoose-testing#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jest": "^30.2.0",
+    "mongoose": "^9.1.5"
+  }
+}
