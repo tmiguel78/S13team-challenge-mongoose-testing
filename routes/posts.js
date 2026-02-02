@@ -3,6 +3,7 @@ const router = express.Router();
 const Post = require('../models/Post');
 
 //Obtener todos los post
+
 router.get('/', async (req, res) => {
     try {
         const post = await Post.find();
@@ -52,6 +53,7 @@ router.get('/title/:title', async (req, res) => {
 })
 
 // Buscar por id
+
 router.get('/id/:_id', async (req, res) => {
     try{
         const post = await Post.findById(req.params._id);
@@ -63,6 +65,7 @@ router.get('/id/:_id', async (req, res) => {
 })
 
 // Actualizar post
+
 router.put('/id/:_id', async(req, res) => {
    try {
     const newTitlePost = req.body.title;
@@ -76,31 +79,8 @@ router.put('/id/:_id', async(req, res) => {
     res.json(post)
     
    } catch (error) {
-    res.status(400).send(error);
+    res.status(500).send(error);
    }
-})
-
-// changeTitle: async(req,res)=>{
-//         try {
-//             const id = req.params._id;
-//             const newTitle = req.body.title;
-//             const oldTask = await TaskModel.find({title});
-//             if(oldTask){
-//                 return res.status(400).json({error:"ya existe una tarea con ese titulo"})
-//             }
-//             const task = await TaskModel.findById(id);
-//             if(!task){
-//                 return res.status(404).json({error:"tarea no encontrada"});
-//             }
-//             task.title = newTitle;
-//             await task.save();
-//             res.json({data:task,message:"tÃ­tulo modificado"});
-//         } catch (error) {
-//             console.error(error);
-//             res.status(500).json({error:"Error en el servidor"}); 
-//         }
-//     },
-
-
+});
 
 module.exports = router; 
